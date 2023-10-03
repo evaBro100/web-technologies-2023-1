@@ -3,53 +3,134 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lesson1</title>
-    <link rel="stylesheet" href="/src/assets/styles/style.css">
+    <title>Document</title>
 </head>
 <body>
-    <header class="header">        
-        <img src="/static/pngwing.com.png" alt="Logo" height="50px">
+    <header class="header">
+        <div class="header-container">
+            <div class="a-navbar-brand">
+                <a href="#" class="navbar-brand">IT WEBSITE</a>
+            </div>
+        </div>
         <nav>
-            <ul class="breadcrumb">
-                <li><a href="index.html">Главная</a></li>
-                <li><a href="contacts.html">Контакты</a></li>
-            </ul>
+            <div class="header-menu">
+                <li><a href="#">Servises</a></li>
+                <li><a href="#">Media</a></li>
+                <li><a href="#">Cases</a></li>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">Contacts</a></li>
+            </div>  
         </nav>
+        <img src="↳ Icon Color.jpg" alt="phone">
+        <p>+7 (111) 111 11 11</p>
+        <p>+7 (111) 111 11 11</p>
+        <img src="mail_outline_24.jpg" alt="mail">
+        <p>itcompany@mail.com</p>
     </header>
+    <hr>
     <main>
-        <section class="hello">
-            <h1>Всем Привет</h1>
-            <article class="beauty-blog">
-                <p>Это beauty-blog. Мы рады вас видеть!</p>
+        <section class="introduction">
+            <article class="info">
+                <h1>Development of mobile applications and web services of any complexity</h1>
+                <p>We create mobile applications for iOS, Android that transfer your business to mobile applications of your customers' devices</p>
+            </article>
+            <hr>
+            <article class="form">
+                <h4>Leave your contacts and we will call you back within 30 minutes</h4>
+                <form class="start-form">
+                    <label for="phone-number">Phone number</label>
+                    <input id="phone-number" type="number" name="phone-number">
+                    <label>Full name <input type="text" name="person-name"></label>
+                    <input class="start-button" type="submit" value="Get consultation">
+                </form>
             </article>
         </section>
-        <hr>
-        <section class="about-us">
-            <h3>О нас</h3>
-            <article class="team">
-                <h4>Наша команда работает для вас</h4>
-                <p>Мы предоставляем качественные услуги и продукты для вашего удовлетворения. Красота - наш девиз.</p>
+        <div class="start-photo">
+            <img src="комментарий к отзыву 1.jpg" alt="">
+            <img src="главная со списком организации 1.jpg" alt="">
+            <img src="настройки.jpg" alt="">
+            <img src="новый чат 1.jpg" alt="">
+            <img src="Сообщения.jpg" alt="">
+            <img src="детали отзыва.jpg" alt="">
+        </div>
+        <section class="development">
+            <article class="full-development-cycle">
+                <h1>Full development cycle</h1>
+                <p>We use proven technologies</p>
+                <h5>Web</h5>
+                <p>PHP / Javascript / Node.JS / Web Socket / Socket.io / Vue.js/ Nuxt / MySQL / Laravel / 
+                    GO lang / django / Python</p>
+                <h5>Mobile</h5>
+                <p>Swift / Kotlin / Alamofire / Firebase / CoreData / 
+                    Room / Realm / Coroutine / RxJava / RxSwift / Unit Test / Navigation</p>
+            </article>
+            <article class="ul-type-development">
+                <ul>
+                    <li>iOS development</li>
+                    <li>Android development</li>
+                    <li>Web development</li>
+                    <li>UI/UX design</li>
+                    <li>Testing</li>
+                    <li>Launch</li>
+                    <li>IT consulting</li>
+                </ul>
             </article>
         </section>
-        <hr>
-        <section class="services">
-            <h3>Наши услуги</h3>
-            <article class="service">
-                <p>Мы предлагаем широкий спектр услуг, включая консультации, разработку и многое другое.</p>
+        <section class="projects">
+            <h1>Developed more than 100 projects in 15 industries</h1>
+            <article class="ul-type-projects">
+                <ul>
+                    <li><img src="телефон.png">Social media</li>
+                    <li><img src="мяч.png" alt="">Fitness and sport</li>
+                    <li><img src="дом.png" alt="">Bank</li>
+                    <li><img src="рабочий.png" alt="">Construction</li>
+                    <li><img src="плэй.png" alt="">Game projects</li>
+                    <li><img src="шапка.png" alt="">Education</li>
+                    <li><img src="машина.png" alt="">Auto, transport</li>
+                    <li><img src="сердце.png" alt="">Medicine, health</li>
+                    <li><img src="тарелка.png" alt="">Restaurants, food delivery</li>
+                    <li><img src="чемодан.png" alt="">Marketplaces</li>
+                    <li><img src="круги.png" alt="">AR technology</li>
+                    <li><img src="калькулятор.png" alt="">TV series</li>
+                    <li><img src="чемодан2.png" alt="">Startups</li>
+                    <li><img src="фея.png" alt="">Religion</li>
+                    <li><img src="плэй.png" alt="">Online cources</li>
+                </ul>
             </article>
         </section>
-        <hr>
+        <section class="best-projects">
+            <h1>Projects we are proud of</h1>
+            <p>Our software development company is truly 
+                proud of the wonderful clients we have worked with. We enjoy a long-term partnership
+            </p>
+            <article class="ul-best-projects">
+                <ul>
+                    <li><a href="#">I-teka</a></li>
+                    <li><a href="#">Dauletten</a></li>
+                    <li><a href="#">Guru Bosch</a></li>
+                    <li><a href="#">Santo</a></li>
+                    <li><a href="#">Home Credit Bank</a></li>
+                    <li><a href="#">BI Partners</a></li>
+                    <li><a href="#">Europharma</a></li>
+                    <input class="projects-button" type="submit" value="View 100 more projects">
+                </ul>
+            </article>
+            <article class="I-teka">
+                <h1>I-teka</h1>
+                <p>The application is designed to search for drugs by availability in pharmacies in cities. During quarantine, the application helped many people,
+                    which gives more value.</p>
+                <p>Business analysis / iOS / Android / QA / UI/UX Design</p>
+                <p><img src="image_2023-10-03_22-21-41.png">Kazakhstan</p>
+                <p><img src="чемодан2.png">Medicine</p>
+                <h4>400%</h4>
+                <p>User Growth</p>
+                <h4>+ 200 000</h4>
+                <p>Active Users</p>
+                <img src="image_2023-10-03_22-28-59.png">
+                <img src="image_2023-10-03_22-29-11.png">
+            </article>
+        </section>
     </main>
-    <footer class="footer">
-        <h3>Мы в соцсетях</h3>
-        <p>Свяжитесь с нами, чтобы получить дополнительную информацию.</p>
-        <hr>
-        <ul>
-            <li>info@mysite.com</li>
-            <li>+7 777 777-7890</li>
-            <li>12345 Улица, Город, Страна</li>
-        </ul>
-        <p>Все права защищены &copy; 2023</p>
-    </footer>
+
 </body>
 </html>

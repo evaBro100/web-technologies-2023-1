@@ -3,6 +3,12 @@ html {
     font-weight: 400;
 }
 
+.container{
+    max-width: 1224px;
+    margin: 0 auto;
+    padding: 0;
+}
+
 *,
 *:before,
 *:after {

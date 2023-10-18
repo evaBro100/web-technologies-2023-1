@@ -3,7 +3,12 @@
     z-index: 3;
     position: relative;
   }
-  
+.information-tech{
+    display: flex;
+    gap: 232px;
+    padding-bottom: 82px;
+    padding-top: 80px;
+}
   .information__container {
     display: flex;
     gap: 232px;

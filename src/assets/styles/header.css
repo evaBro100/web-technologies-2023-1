@@ -4,6 +4,7 @@
     top: 0;
     z-index: 50;
 }
+
 .header__container {
     display: inline-flex;
     align-items: center;
@@ -13,22 +14,19 @@
     gap: 80px;
     width: 1224px;
     height: 56px;
-
 }
-.header__container_logo {
+.header__logo{
     font-size: 20;
     font-family: "Inter", sans-serif;
     font-weight: 700;
     color: #2D66EE;
-    line-height: 18px;
-    width: 120px;
-    height: 24px;
-    /* text-decoration: none; */
-    /* white-space: nowrap; */
+    text-decoration: none;
+    white-space: nowrap;
 }
-nav{
+.header__menu{
     display: flex;
 }
+
 ul{
     margin: 0;
     list-style-type: none;
@@ -39,10 +37,13 @@ ul{
     height: 24px;
 }
 .header__nav {
-    display: flex;
+    /* display: flex;
     align-items: flex-start;
     gap: 24px;
-    padding-left: 0;
+    padding-left: 0; */
+    display: flex;
+    gap: 24px;
+    padding: 0;
 }
 .header__contacts {
     display: flex;

@@ -1,8 +1,15 @@
 .introduction__main {
+    position: relative;
+    min-height: 900px;
+}
+
+.inroduction__background-color{
     background-color: #F2F4F7;
 }
-/* .introduction_container {
-} */
+.introduction__container{
+    max-width: 1224px;
+    margin: auto;
+}
 .introduction_text {
     display: flex;
     flex-direction: column;

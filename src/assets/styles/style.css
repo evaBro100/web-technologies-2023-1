@@ -4,6 +4,7 @@
 @import "./header.css";
 @import "./introduction.css";
 @import "./info.css";
+@import "./footer.css";
 
 body {
     color: #101828;
@@ -24,13 +25,18 @@ h1, h2, h3, h4, h5, h6{
     margin: 0;
 }
 
-main{
+/* main{
     overflow: hidden;
-}
+} */
 
 span {
     color: #306FF5;
 }
+
+/* a{
+    font-family: SF-Pro-Text ;
+    font-size: 14px;
+} */
 
 h1 {
     color: #101828;

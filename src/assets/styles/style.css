@@ -25,9 +25,12 @@ h1, h2, h3, h4, h5, h6{
     margin: 0;
 }
 
-/* main{
+main{
     overflow: hidden;
-} */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
 
 span {
     color: #306FF5;

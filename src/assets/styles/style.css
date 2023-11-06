@@ -6,9 +6,6 @@
 @import "./info.css";
 @import "./footer.css";
 
-
-
-
 body {
     color: #101828;
     margin: 0;
@@ -17,6 +14,19 @@ body {
 .container{
     max-width: 1224px;
     margin: 0 auto;
+}
+@media (max-width: 1439px) {
+    .container{
+        max-width: 702px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 767px){
+    .container{
+        max-width: 383px;
+        margin: 0 auto;
+    }
 }
 
 ul{

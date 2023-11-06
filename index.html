@@ -8,8 +8,13 @@
 </head>
 <body>
     <div class="container">
-        <header class="header">
-            <div class="header__container">
+        <header class="header container">
+            <div class="header__container container">
+                <div class="header__menu-burger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
                 <a href="#" class="header__logo">IT WEBSITE</a>
                 <nav class="header__menu">
                     <ul class="header__nav">
@@ -20,22 +25,6 @@
                         <li><a href="#">Contacts</a></li>
                     </ul>  
                 </nav>
-
-                <!-- <div class="header__adaptive">
-                    <div class="header__container-adaptive">
-                        <div class="header__menu-burger">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                        </div>
-                        <a href="#" class="header__logo-adaptive">IT WEBSITE</a>
-                        <div class="contacts__email">
-                            <img class="contacts__item-img2" src="src/assets/icons/svg/mail_outline_24.svg" alt="message">
-                            <a href="#" class="contacts__item">itcompany@mail.com</a>
-                        </div>
-                    </div>
-                </div> -->
-
                 <div class="header__contacts">
                     <div class="contacts-telephone">
                         <img class="contacts__item-img1" src="src/assets/icons/svg/smartphone_outline_24.svg" alt="telephone">
@@ -56,32 +45,34 @@
 
         <main class="main">
             <div class="inroduction__background-color">
-                <div class="introduction__container">
+                <div class="introduction__container container">
                     <section class="introduction__main">
-                        <article class="introduction_text">
+                        <article class="text introduction__text">
                             <h1>Development of <span>mobile applications</span> and 
                                 <span>web services </span>of any complexity</h1>
                             <h6>We create mobile applications for iOS, Android that transfer your business to mobile 
                                 applications of your customers' devices</h6>
                         </article>
                         <article class="introduction__form-text">
-                            <h4>Leave your contacts and we will call you back<br>
+                            <h4 class="introduction__form-title">Leave your contacts and we will call you back
                                 within 30 minutes</h4>
                             <form class="introduction__form">
                                 <label class="introduction__form-info-input" for="phone-number">Phone number
                                 <input id="phone-number" type="tel" name="phone-number" placeholder="+7 (111) 111 11 11"></label>
 
-                                <label class="introduction__form-info-input">Full Name <input type="text"> </label>
+                                <label class="introduction__form-info-input">Full Name <input type="text" name="person-name" placeholder="Иван Иванов"> </label>
                                 <button class="start-button" type="submit">Get consultation</button>
                             </form>
                         </article>
                     <div class="introduction__photo">
-                        <img src="src/assets/img/nike.jpeg" alt="">
-                        <img src="src/assets/img/main.jpeg" alt="">
-                        <img src="src/assets/img/coment.jpeg" alt="">
+                        <!-- <img src="src/assets/img/column-left.jpg" alt="">
+                        <img src="src/assets/img/column-right.jpg" alt=""> -->
+                        <img class="photo-column" src="src/assets/img/column-left.jpg" alt="">
+                        <img class="photo-column" src="src/assets/img/column-right.jpg" alt="">
+                        <!-- <img src="src/assets/img/coment.jpeg" alt="">
                         <img src="src/assets/img/main.jpeg" alt="">
                         <img src="src/assets/img/messages.jpeg" alt="">
-                        <img src="src/assets/img/settings.jpeg" alt="">
+                        <img src="src/assets/img/settings.jpeg" alt=""> -->
                     </div>
                     </section>
                 </div>
@@ -90,7 +81,7 @@
         <div class="information">
             <section class="information-tech container">
                 <article class="technology">
-                    <h2 class="information-technology__title">Full development cycle</h2>
+                    <h2 class=" text information-technology__title">Full development cycle</h2>
                     <h6>We use proven technologies</h6>
                     <div class="info-technologies__stack">
                     <div>
@@ -305,8 +296,7 @@
                 </div>
             </article>
         </section>
-        </main>
-
+        </main> 
         <div class="container">
             <footer class="footer">
                 <div class="footer__container">

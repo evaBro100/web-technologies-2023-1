@@ -65,3 +65,46 @@
     width: 24px;
     display: list-item;
 }
+
+@media (max-width:1439px){
+    .information-tech{
+        gap: 83px;
+    }
+
+    .info-technologies__stack{
+        max-width: 277px;
+        gap: 16px;
+        margin-top: 32px;
+
+    }
+
+    .info-technologies__stack-item{
+        font-size: 14px;
+    }
+
+    .info-technologies__development-list{
+        margin-top: 84px;
+    }
+
+}
+
+@media (max-width:767px){
+    .information-tech{
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+        padding-top: 32px;
+        padding-bottom: 52px;
+    }
+
+    .info-technologies__stack{
+        gap: 32px;
+    }
+
+    .info-technologies__stack h4{
+        font-family: SF-Pro-Display;
+    }
+    .info-technologies__development-list{
+        margin-top:auto;
+    }
+}

@@ -69,6 +69,7 @@
   transform: rotate(-12deg);
 }
 
+
 .introduction__photo > div {
   display: flex;
   flex-direction: column;
@@ -82,6 +83,11 @@
 }
 
 @media (max-width: 1439px) {
+  .introduction__main{
+    position: relative;
+    min-height: 762px;
+    margin-bottom: 32px;
+  }
   .introduction__text {
     max-width: 383px;
   }
@@ -117,6 +123,7 @@
     width: 137.93px;
     height: 298.663px;
   }
+
 }
 
 @media (max-width: 767px) {
@@ -130,5 +137,20 @@
   .introduction__text {
     max-width: 383px;
     padding-top: 132px;
+  }
+
+  .introduction__photo{
+    position: absolute;
+    top: 334px;
+    left: 117px;
+    display: flex;
+    gap: 20px;
+    width: 624px;
+    flex-wrap: wrap;
+    transform: rotate(-12deg);
+  }
+
+  .introduction__text h1{
+    font-size: 28px;
   }
 }

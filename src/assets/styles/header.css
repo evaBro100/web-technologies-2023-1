@@ -5,8 +5,9 @@
 .header {
     position: fixed;
     margin-top: 24px;
-    top: 24px;
+    left: 50%;
     z-index: 50;
+    transform: translateX(-50%);
 }
 
 .header__container {

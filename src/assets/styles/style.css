@@ -5,6 +5,8 @@
 @import "./introduction.css";
 @import "./info.css";
 @import "./footer.css";
+@import "./projects.css";
+
 
 body {
     color: #101828;
@@ -50,10 +52,6 @@ span {
     color: #306FF5;
 }
 
-/* a{
-    font-family: SF-Pro-Text ;
-    font-size: 14px;
-} */
 
 h1 {
     color: #101828;

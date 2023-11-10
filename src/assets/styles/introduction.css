@@ -6,10 +6,10 @@
 .inroduction__background-color {
   background-color: #f2f4f7;
 }
-.introduction__container {
+/* .introduction__container {
   max-width: 1224px;
   margin: auto;
-}
+} */
 .introduction__text {
   display: flex;
   flex-direction: column;

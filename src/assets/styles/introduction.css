@@ -67,19 +67,53 @@
   width: 624px;
   flex-wrap: wrap;
   transform: rotate(-12deg);
+  /* animation: slideDownRight 20s linear infinite alternate; */
 }
 
+.introduction__photo-left > img, .introduction__photo-right > img{
+  animation-duration: 20s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+.introduction__photo-left > img{
+  animation-name: slideUpLeft;
+}
+
+.introduction__photo-right > img{
+  animation-name: slideDownRight;
+}
+
+
+@keyframes slideUpLeft{
+  0%{
+    transform: translateY()
+  }
+  100%{
+    transform: translateY(-80%);
+  }
+}
+
+@keyframes slideDownRight{
+  0%{
+    transform: translateY()
+  }
+  100%{
+    transform: translateY(80%);
+  }
+}
 
 .introduction__photo > div {
   display: flex;
   flex-direction: column;
   gap: 20px;
+  /* animation: slideUpLeft 20s linear infinite alternate; */
 }
 
 .introduction__photo > div > img {
   width: 292.226px;
   height: 632.767px;
   border-radius: 24px;
+  /* animation: slideUpLeft 20s linear infinite alternate; */
 }
 
 @media (max-width: 1439px) {

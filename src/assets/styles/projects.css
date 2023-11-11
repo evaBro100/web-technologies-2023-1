@@ -17,13 +17,16 @@
 }
 
 .projects__block-lists-ul li > img{
-    border-radius: 100px;
-    padding: 10px;
-    background-color: #fff;
-    gap: 15px;
+    z-index: 10;
+    height: 24px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 24px;
 }
 
 .projects__block-lists-ul li {
+    position: relative;
     display: flex;
     gap: 16px;
     justify-content: flex-start;
@@ -33,9 +36,16 @@
     font-size: 17px;
 }
 
-.projects-photo{
-    padding: 10px;
+.projects__block-lists-ul li::before{
+    content: "";
+    border-radius: 100px;
+    padding: 22px;
+    background-color: #fff;
 }
+
+/* .projects-photo{
+    padding: 10px;
+} */
 
 .hide_photos{
     display: none;

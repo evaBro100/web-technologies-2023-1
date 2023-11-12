@@ -1,0 +1,97 @@
+$color_1: #101828;
+$color_2: #306FF5;
+$font-family_1: Inter;
+$font-family_2: SF-Pro-Text;
+
+@import "./global.scss";
+@import "./fonts.scss";
+@import "./utils.scss";
+@import "./header.scss";
+@import "./introduction.scss";
+@import "./info.scss";
+@import "./footer.scss";
+@import "./projects.scss";
+
+body {
+	color: $color_1;
+	margin: 0;
+}
+.container {
+	max-width: 1224px;
+	margin: 0 auto;
+}
+ul {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+h1 {
+	margin: 0;
+	color: $color_1;
+	font-family: $font-family_1;
+	font-size: 36px;
+	font-style: normal;
+	font-weight: 700;
+	letter-spacing: 0.326px;
+}
+h2 {
+	margin: 0;
+}
+h3 {
+	margin: 0;
+}
+h4 {
+	margin: 0;
+	color: $color_1;
+	font-feature-settings: 'clig'off, 'liga'off;
+	font-family: $font-family_1;
+	font-size: 20px;
+	font-style: normal;
+	font-weight: 700;
+	letter-spacing: 0.38px;
+}
+h5 {
+	margin: 0;
+}
+h6 {
+	margin: 0;
+	font-family: $font-family_2;
+	font-size: 15px;
+	font-style: normal;
+	font-weight: 500;
+	letter-spacing: -0.24px;
+}
+main {
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
+span {
+	color: $color_2;
+}
+input {
+	border: none;
+	margin: 8px 0;
+	font-size: 17px;
+	font-style: normal;
+	font-weight: 400;
+	&:focus-visible {
+		outline: none;
+	}
+	placeholder {
+		color: $color_1;
+	}
+}
+@media (max-width: 1439px) {
+	.container {
+		max-width: 702px;
+		margin: 0 auto;
+	}
+}
+@media (max-width: 767px) {
+	.container {
+		max-width: 383px;
+		margin: 0 auto;
+	}
+}

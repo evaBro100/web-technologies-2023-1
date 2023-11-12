@@ -1,0 +1,110 @@
+$color_1: #344054;
+$color_2: #2d66ee;
+$color_3: #1d2939;
+$font-family_1: SF-Pro-Text;
+$font-family_2: SF-Pro-Display;
+$background-color_1: white;
+
+.information {
+	background-color: $background-color_1;
+	z-index: 3;
+	position: relative;
+}
+.information-tech {
+	display: flex;
+	gap: 232px;
+	padding-bottom: 82px;
+	padding-top: 80px;
+}
+.information__container {
+	display: flex;
+	gap: 232px;
+	padding-bottom: 82px;
+	padding-top: 80px;
+}
+.information-technology__title {
+	margin-bottom: 32px;
+}
+.info-technologies__stack {
+	display: flex;
+	flex-direction: column;
+	gap: 32px;
+	margin-top: 34px;
+	width: 496px;
+}
+.info-technologies__stack-item {
+	display: flex;
+	flex-wrap: wrap;
+	margin-top: 16px;
+	color: $color_1;
+	font-family: $font-family_1;
+	font-size: 17px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 22px;
+	letter-spacing: -0.408px;
+	>* {
+		&:not(:last-child) {
+			&::after {
+				content: "/";
+				color: $color_2;
+				padding: 0 5px;
+			}
+		}
+	}
+}
+.info-technologies__development-list {
+	>* {
+		padding: 12px 0;
+		display: flex;
+		color: $color_3;
+		font-family: $font-family_2;
+		font-size: 20px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: 24px;
+		letter-spacing: 0.38px;
+		&::after {
+			content: "";
+			margin-left: 12px;
+			background: url(../img/svg/chevron_right_small_24.svg) no-repeat;
+			height: 24px;
+			width: 24px;
+			display: list-item;
+		}
+	}
+}
+@media (max-width:1439px) {
+	.information-tech {
+		gap: 83px;
+	}
+	.info-technologies__stack {
+		max-width: 277px;
+		gap: 16px;
+		margin-top: 32px;
+	}
+	.info-technologies__stack-item {
+		font-size: 14px;
+	}
+	.info-technologies__development-list {
+		margin-top: 84px;
+	}
+}
+@media (max-width:767px) {
+	.information-tech {
+		display: flex;
+		flex-direction: column;
+		gap: 32px;
+		padding-top: 32px;
+		padding-bottom: 52px;
+	}
+	.info-technologies__stack {
+		gap: 32px;
+		h4 {
+			font-family: $font-family_2;
+		}
+	}
+	.info-technologies__development-list {
+		margin-top: auto;
+	}
+}

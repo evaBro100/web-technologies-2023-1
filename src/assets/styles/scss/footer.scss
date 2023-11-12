@@ -1,0 +1,138 @@
+$color_1: #FFF;
+$color_2: #98A2B3;
+$color_3: white;
+$font-family_1: Inter;
+$font-family_2: SF-Pro-Text;
+$background-color_1: #101828;
+
+.footer__logo {
+	color: $color_1;
+	font-family: $font-family_1;
+	font-size: 36px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 18px;
+	letter-spacing: -0.154px;
+	width: 217px;
+	height: 24px;
+}
+.footer {
+	background-color: $background-color_1;
+	margin-top: auto;
+	border-radius: 12px;
+	margin-bottom: 48px;
+}
+.footer__container {
+	display: flex;
+	padding: 24px;
+	flex-direction: column;
+	align-items: center;
+	gap: 40px;
+}
+.footer__navbar {
+	display: flex;
+	flex-direction: row;
+	align-items: flex-start;
+	gap: 8px;
+	color: $color_1;
+}
+.footer-menu {
+	ul {
+		display: flex;
+		justify-content: center;
+	}
+}
+.footer__items {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 8px;
+	font-family: $font-family_2;
+	font-size: 14px;
+	color: $color_2;
+	width: 294px;
+	height: 54px;
+}
+.footer__items-icon {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+}
+.footer__items-text {
+	font-family: $font-family_2;
+	font-size: 17px;
+	color: $color_3;
+	font-style: normal;
+	font-weight: 600;
+	line-height: 22px;
+	letter-spacing: -0.408px;
+}
+.footer__bottom {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+	white-space: nowrap;
+	h4 {
+		font-size: 13px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: 16px;
+		letter-spacing: -0.078px;
+	}
+}
+@media (max-width: 1439px) {
+	.footer__items {
+		display: flex;
+		width: 176px;
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 8px;
+	}
+	.footer__list {
+		.footer__items {
+			&:nth-child(2) {
+				width: 156px;
+			}
+		}
+	}
+}
+@media (max-width: 767px) {
+	.footer__items {
+		display: flex;
+		width: 154px;
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 8px;
+	}
+	.footer__menu {
+		display: flex;
+		flex-direction: column;
+		flex-wrap: wrap;
+		gap: 67px;
+	}
+	.footer {
+		background-color: $background-color_1;
+		margin-top: auto;
+		border-radius: 12px;
+		max-width: 767px;
+		margin-bottom: auto;
+		margin-left: 0;
+	}
+	.footer__items-text {
+		width: 176px;
+	}
+	.footer__list {
+		flex-wrap: wrap;
+		justify-content: flex-end;
+	}
+	.footer-menu {
+		ul {
+			display: flex;
+			justify-content: space-between;
+			max-width: 427px;
+		}
+	}
+	.footer__navbar {
+		gap: 67px;
+	}
+}

@@ -1,7 +1,15 @@
 .best__projects-block {
   display: flex;
   flex-direction: column;
+  gap: 40px;
+  padding-bottom: 63px;
+}
+
+.best__projects-block-intro {
+  display: flex;
   gap: 24px;
+  flex-wrap: wrap;
+  max-width: 600px;
 }
 
 .best_projects-ul-items ul {

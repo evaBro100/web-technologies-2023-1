@@ -1,3 +1,7 @@
+.projects {
+  z-index: 3;
+}
+
 .projects__block {
   padding-top: 80px;
   padding-bottom: 120px;

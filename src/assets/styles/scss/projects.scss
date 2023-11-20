@@ -1,7 +1,9 @@
 $font-family_1: SF-Pro-Text;
 $background-color_1: #fff;
 
-
+.projects{
+    z-index: 3;
+}
 .projects__block {
 	padding-top: 80px;
 	padding-bottom: 120px;

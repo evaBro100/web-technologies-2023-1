@@ -6,6 +6,7 @@
 @import "./info.css";
 @import "./footer.css";
 @import "./projects.css";
+@import "./best-projects.css";
 body {
   color: #101828;
   margin: 0;

@@ -64,14 +64,18 @@ $background-color_1: white;
 		font-weight: 400;
 		line-height: 24px;
 		letter-spacing: 0.38px;
+
 		&::after {
 			content: "";
 			margin-left: 12px;
-			background: url(../img/svg/chevron_right_small_24.svg) no-repeat;
+			background: url(/src/assets/img/svg/chevron_right_small_24.svg) no-repeat;
 			height: 24px;
 			width: 24px;
 			display: list-item;
 		}
+	}
+	> li:hover{
+		border-bottom: 1px solid $color_2;
 	}
 }
 @media (max-width:1439px) {

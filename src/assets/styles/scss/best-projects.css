@@ -1,0 +1,25 @@
+.best__projects-block {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.best_projects-ul-items ul {
+  margin-top: 31px;
+  padding: 0;
+  display: flex;
+  min-width: 300px;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.best_projects-ul-items ul a {
+  color: #1D2939;
+  font-family: SF-Pro-Text;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px;
+  letter-spacing: -0.408px;
+  text-decoration: none;
+  white-space: nowrap;
+}/*# sourceMappingURL=best-projects.css.map */

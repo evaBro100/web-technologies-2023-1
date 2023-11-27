@@ -22,19 +22,18 @@
   position: relative;
   min-height: 900px;
 }
-
+.introduction__main-text-form{
+	max-width: 50%;
+}
 .inroduction__background-color {
   background-color: #f2f4f7;
 }
-
 .introduction__text {
   display: flex;
   flex-direction: column;
   padding-top: 160px;
-  max-width: 600px;
   gap: 24px;
 }
-
 .introduction__form-text {
   margin-top: 64px;
   max-width: 724px;
@@ -46,23 +45,20 @@
   gap: 32px;
   border-radius: 12px;
   background: #fff;
-  box-shadow: 0px 0px 24px 0px rgba(0, 0, 0, 0.16), 0px 0px 2px 0px rgba(0, 0, 0, 0.08);
+  box-shadow: 0px 0px 24px 0px rgba(0, 0, 0, 0.16),
+    0px 0px 2px 0px rgba(0, 0, 0, 0.08);
 }
-
 .introduction__form-title {
   max-width: 600px;
 }
-
 .introduction__form {
   display: flex;
   gap: 24px;
 }
-
 .introduction__form-info-input {
   max-width: 224px;
   border-bottom: 1px #d0d5dd solid;
 }
-
 .start-button {
   padding: 11px 24px;
   background-color: #2d66ee;
@@ -77,55 +73,58 @@
   border-radius: 8px;
   border: none;
 }
-
 .introduction__photo {
   position: absolute;
   top: -591px;
-  left: 720px;
+  right: -113px;
   display: flex;
   gap: 20px;
   width: 624px;
   flex-wrap: wrap;
   transform: rotate(-12deg);
+  > div {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    > img {
+      width: 292.226px;
+      height: 632.767px;
+      border-radius: 24px;
+    }
+  }
 }
-.introduction__photo > div {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
+.introduction__photo-left {
+  > img {
+    animation-duration: 20s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-name: slideUpLeft;
+  }
 }
-.introduction__photo > div > img {
-  width: 292.226px;
-  height: 632.767px;
-  border-radius: 24px;
+.introduction__photo-right {
+  > img {
+    animation-duration: 20s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-name: slideDownRight;
+  }
 }
-
-.introduction__photo-left > img {
-  animation-duration: 20s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
-  animation-name: slideUpLeft;
-}
-
-.introduction__photo-right > img {
-  animation-duration: 20s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
-  animation-name: slideDownRight;
-}
-
 @media (max-width: 1439px) {
   .introduction__main {
     position: relative;
     min-height: 762px;
     margin-bottom: 32px;
   }
+  .introduction__main-text-form{
+	max-width: 60%;
+}
   .introduction__text {
-    max-width: 383px;
+    // max-width: 383px;
   }
   .introduction__form-text {
-    width: 382px;
+    // width: 382px;
     padding: 32px;
   }
   .introduction__form-title {
@@ -148,11 +147,13 @@
   }
   .introduction__photo {
     top: -69px;
-    left: 456px;
-  }
-  .introduction__photo > div > img {
-    width: 137.93px;
-    height: 298.663px;
+    right: -370px;
+    > div {
+      > img {
+        width: 137.93px;
+        height: 298.663px;
+      }
+    }
   }
 }
 @media (max-width: 767px) {
@@ -165,12 +166,12 @@
   .introduction__text {
     max-width: 383px;
     padding-top: 132px;
-  }
-  .introduction__text h1 {
-    font-size: 28px;
-  }
-  .introduction__text h6 {
-    margin-bottom: 536px;
+    h1 {
+      font-size: 28px;
+    }
+    h6 {
+      margin-bottom: 536px;
+    }
   }
   .introduction__photo {
     position: absolute;
@@ -195,7 +196,7 @@
   }
   .introduction__form-info-input {
     max-width: 224px;
-    border-bottom: 1px #D0D5DD solid;
+    border-bottom: 1px #d0d5dd solid;
     color: #667085;
     font-family: SF-Pro-Text;
     font-size: 13px;
@@ -204,4 +205,4 @@
     line-height: 16px;
     letter-spacing: -0.078px;
   }
-}/*# sourceMappingURL=intoduction.css.map */
+}

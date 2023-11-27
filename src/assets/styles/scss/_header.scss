@@ -1,10 +1,3 @@
-$color_1: #2D66EE;
-$color_2: #101828;
-$font-family_1: "Inter", sans-serif;
-$font-family_2: SF-Pro-Text;
-$font-family_3: "SF-Pro-Text", sans-serif;
-$background-color_1: white;
-
 .header__adaptive {
 	display: none;
 }
@@ -22,7 +15,7 @@ $background-color_1: white;
 	display: inline-flex;
 	justify-content: space-between;
 	align-items: center;
-	background-color: $background-color_1;
+	background-color: white;
 	border-radius: 12px;
 	padding: 16px 24px;
 	width: 1224px;
@@ -30,9 +23,9 @@ $background-color_1: white;
 }
 .header__logo {
 	font-size: 20px;
-	font-family: $font-family_1;
+	font-family: "Inter", sans-serif;
 	font-weight: 700;
-	color: $color_1;
+	color: #2D66EE;
 	text-decoration: none;
 	white-space: nowrap;
 }
@@ -52,10 +45,10 @@ ul {
 }
 a {
 	text-decoration: none;
-	color: $color_2;
+	color: #101828;
 }
 .navbar-logo {
-	color: $color_1;
+	color: #2D66EE;
 	width: 120px;
 	height: 24px;
 }
@@ -63,7 +56,7 @@ a {
 	display: flex;
 	gap: 24px;
 	padding: 0;
-	font-family: $font-family_2;
+	font-family: SF-Pro-Text;
 	font-size: 14px;
 }
 .header__contacts {
@@ -92,10 +85,10 @@ a {
 }
 .contacts__item {
 	font-size: 14px;
-	font-family: $font-family_3;
+	font-family: "SF-Pro-Text", sans-serif;
 	font-weight: 500;
 	white-space: nowrap;
-	color: $color_1;
+	color: #2D66EE;
 	gap: 16px;
 }
 .contacts__email {
@@ -133,9 +126,9 @@ a {
 	}
 	.header__logo {
 		font-size: 20;
-		font-family: $font-family_1;
+		font-family: "Inter", sans-serif;
 		font-weight: 700;
-		color: $color_1;
+		color: #2D66EE;
 		text-decoration: none;
 		white-space: nowrap;
 		position: absolute;

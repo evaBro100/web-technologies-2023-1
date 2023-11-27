@@ -1,17 +1,11 @@
-$color_1: #344054;
-$color_2: #2d66ee;
-$color_3: #1d2939;
-$font-family_1: SF-Pro-Text;
-$font-family_2: SF-Pro-Display;
-$background-color_1: white;
-
 .information {
-	background-color: $background-color_1;
+	background-color: white;
 	z-index: 3;
 	position: relative;
 }
 .information-tech {
 	display: flex;
+	justify-content: space-between;
 	gap: 232px;
 	padding-bottom: 82px;
 	padding-top: 80px;
@@ -36,8 +30,8 @@ $background-color_1: white;
 	display: flex;
 	flex-wrap: wrap;
 	margin-top: 16px;
-	color: $color_1;
-	font-family: $font-family_1;
+	color: #344054;
+	font-family: SF-Pro-Text;
 	font-size: 17px;
 	font-style: normal;
 	font-weight: 400;
@@ -47,7 +41,7 @@ $background-color_1: white;
 		&:not(:last-child) {
 			&::after {
 				content: "/";
-				color: $color_2;
+				color: #2d66ee;
 				padding: 0 5px;
 			}
 		}
@@ -57,8 +51,8 @@ $background-color_1: white;
 	>* {
 		padding: 12px 0;
 		display: flex;
-		color: $color_3;
-		font-family: $font-family_2;
+		color: #1d2939;
+		font-family: SF-Pro-Display;
 		font-size: 20px;
 		font-style: normal;
 		font-weight: 400;
@@ -75,12 +69,15 @@ $background-color_1: white;
 		}
 	}
 	> li:hover{
-		border-bottom: 1px solid $color_2;
+		border-bottom: 1px solid #2d66ee;
 	}
 }
 @media (max-width:1439px) {
 	.information-tech {
-		gap: 83px;
+		// gap: 83px;
+		// margin: 32px 0 35px 0;
+		padding-bottom: 32px;
+		padding-top: 35px;
 	}
 	.info-technologies__stack {
 		max-width: 277px;
@@ -105,7 +102,7 @@ $background-color_1: white;
 	.info-technologies__stack {
 		gap: 32px;
 		h4 {
-			font-family: $font-family_2;
+			font-family: SF-Pro-Display;
 		}
 	}
 	.info-technologies__development-list {

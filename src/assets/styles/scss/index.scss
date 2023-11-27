@@ -1,8 +1,3 @@
-$color_1: #101828;
-$color_2: #306FF5;
-$font-family_1: Inter;
-$font-family_2: SF-Pro-Text;
-
 @import "./global.scss";
 @import "./fonts.scss";
 @import "./utils.scss";
@@ -14,7 +9,7 @@ $font-family_2: SF-Pro-Text;
 @import "./best-projects.scss";
 
 body {
-	color: $color_1;
+	color: #101828;
 	margin: 0;
 }
 .container {
@@ -28,8 +23,8 @@ ul {
 }
 h1 {
 	margin: 0;
-	color: $color_1;
-	font-family: $font-family_1;
+	color: #101828;
+	font-family: Inter;
 	font-size: 36px;
 	font-style: normal;
 	font-weight: 700;
@@ -43,9 +38,9 @@ h3 {
 }
 h4 {
 	margin: 0;
-	color: $color_1;
+	color: #101828;
 	font-feature-settings: 'clig'off, 'liga'off;
-	font-family: $font-family_1;
+	font-family: Inter;
 	font-size: 20px;
 	font-style: normal;
 	font-weight: 700;
@@ -56,7 +51,7 @@ h5 {
 }
 h6 {
 	margin: 0;
-	font-family: $font-family_2;
+	font-family: SF-Pro-Text;
 	font-size: 15px;
 	font-style: normal;
 	font-weight: 500;
@@ -69,7 +64,7 @@ main {
 	min-height: 100vh;
 }
 span {
-	color: $color_2;
+	color: #306FF5;
 }
 input {
 	border: none;
@@ -81,13 +76,15 @@ input {
 		outline: none;
 	}
 	placeholder {
-		color: $color_1;
+		color: #101828;
 	}
 }
 @media (max-width: 1439px) {
 	.container {
-		max-width: 702px;
-		margin: 0 auto;
+		// max-width: 702px;
+		// margin: 0 auto;
+		padding-left: 35px;
+		padding-right: 35px;
 	}
 }
 @media (max-width: 767px) {

@@ -126,22 +126,27 @@ class Pizza {
   }
 }
 
-const calculateBtn = document.querySelector(".calculateBtn");
-if (calculateBtn){
-  calculateBtn.addEventListener("click", function (event) {
-    event.preventDefault();
+document.addEventListener("DOMContentLoaded", function () {
+  const calculateBtn = document.querySelector(".calculateBtn");
 
-    const selectedPizza = document.myForm.pizza.value;
-    const selectedSize = document.myForm.size.value;
-    const selectedToppings = document.myForm.topping.value;
-    
-    const myPizza = new Pizza(selectedPizza, selectedSize);
-    selectedToppings.forEach(topping => {
-      myPizza.addTopping(topping);
+  if (calculateBtn) {
+    calculateBtn.addEventListener("click", function (event) {
+      event.preventDefault();
+
+      const selectedPizza = document.myForm.pizza.value;
+      const selectedSize = document.myForm.size.value;
+      const selectedToppings = Array.from(document.myForm.topping.options)
+        .filter((option) => option.selected)
+        .map((option) => option.value);
+
+      const myPizza = new Pizza(selectedPizza, selectedSize);
+      selectedToppings.forEach((topping) => {
+        myPizza.addTopping(topping);
+      });
+
+      const totalPrice = myPizza.calculatePrice();
+      const totalCalories = myPizza.calculateCalories();
+      alert(`Стоимость пиццы: ${totalPrice} рублей, Калорийность: ${totalCalories} ккал`);
     });
-    
-    const totalPrice = myPizza.calculatePrice();
-    const totalCalories = myPizza.calculateCalories();
-    alert(`Стоимость пиццы: ${totalPrice} рублей, Калорийность: ${totalCalories} ккал`);
-  })
-};
+  }
+});

@@ -1,50 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pizza</title>
-    <script src="scripts/script.js"></script>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Pizza</title>
+<script src="scripts/script.js"></script>
 </head>
 <body>
-    <form name="myForm">
-        <h1>Выбор пиццы</h1>
-        <select name="pizza" multiple>
-            <option value="Маргарита">Маргарита (500 рублей, 300ккал)</option>
-            <option value="Пепперони">Пепперони (800 рублей, 400ккал)</option>
-            <option value="Баварская">Баварская (700 рублей, 450ккал)</option>
-        </select>
-        <h1>Выбор размера</h1>
-        <select name="size" multiple>
-            <option value="Большая">Большая (+200 рублей, +200ккал)</option>
-            <option value="Маленькая">Маленькая (+100 рублей, +100ккал)</option>
-        </select>
-        <h1>Выбор топпинга</h1>
-        <select name="topping" multiple>
-            <option value="сливочная моцарелла ">сливочная моцарелла (+50 рублей, +20ккал)</option>
-            <option value="сырный борт">сырный борт (+150 рублей, +50ккал для маленькой пиццы и +300 рублей +50ккал для большой пиццы)</option>
-            <option value="чедер и пармезан">чедер и пармезан (+150 рублей +50ккал для маленькой пиццы и +300 рублей +50ккал для большой пиццы)</option>
-        </select>
-        <p>Вы выбрали:</p>
-        <div id="selection"></div>
-        <button class="calculateBtn">
-            Рассчитать</button>
-    </form>
-    <script>
-const pizza = document.myForm.pizza;
-const size = document.myForm.size;
-const topping = document.myForm.topping;
+<form name="myForm">
+    <h1>Выбор пиццы</h1>
+    <select name="pizza">
+    <option value="Маргарита">Маргарита (500 рублей, 300ккал)</option>
+    <option value="Пепперони">Пепперони (800 рублей, 400ккал)</option>
+    <option value="Баварская">Баварская (700 рублей, 450ккал)</option>
+    </select>
+    <h1>Выбор размера</h1>
+    <select name="size">
+    <option value="Большая">Большая (+200 рублей, +200ккал)</option>
+    <option value="Маленькая">Маленькая (+100 рублей, +100ккал)</option>
+    </select>
+    <h1>Выбор топпинга</h1>
+    <select name="topping" multiple>
+    <option value="сливочная моцарелла ">
+        сливочная моцарелла (+50 рублей, +20ккал)
+    </option>
+    <option value="сырный борт">
+        сырный борт (+150 рублей, +50ккал для маленькой пиццы и +300 рублей
+        +50ккал для большой пиццы)
+    </option>
+    <option value="чедер и пармезан">
+        чедер и пармезан (+150 рублей +50ккал для маленькой пиццы и +300
+        рублей +50ккал для большой пиццы)
+    </option>
+    </select>
+    <p>Вы выбрали:</p>
+    <div id="selection"></div>
+    <button class="calculateBtn">Рассчитать</button>
+</form>
+<script>
+    const pizza = document.myForm.pizza;
+    const size = document.myForm.size;
+    const topping = document.myForm.topping;
 
-const selection = document.getElementById("selection");
+    const selection = document.getElementById("selection");
 
-function changeOption() {
+    function changeOption() {
     while (selection.firstChild) {
         selection.removeChild(selection.firstChild);
     }
 
     const selectedPizza = pizza.value;
     const selectedSize = size.value;
-    const selectedToppings = topping.value;
+    const selectedToppings = [];
+    for (let i = 0; i < topping.selectedOptions.length; i++) {
+        selectedToppings.push(topping.selectedOptions[i].value);
+    }
 
     const pPizza = document.createElement("p");
     pPizza.innerHTML = "Пицца: " + selectedPizza;
@@ -55,13 +65,13 @@ function changeOption() {
     selection.appendChild(pSize);
 
     const pToppings = document.createElement("p");
-    pToppings.innerHTML = "Топпинги: " + selectedToppings;
+    pToppings.innerHTML = "Топпинги: " + selectedToppings.join(", ");
     selection.appendChild(pToppings);
     }
 
     pizza.addEventListener("change", changeOption);
     size.addEventListener("change", changeOption);
     topping.addEventListener("change", changeOption);
-    </script>
+</script>
 </body>
 </html>

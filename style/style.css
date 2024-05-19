@@ -1,0 +1,133 @@
+main{
+    display: flex;
+}
+
+.block{
+    width: 1200px;
+    margin: 0 auto;
+    padding-top: 20px;
+    display: flex;
+    justify-content: center;
+    column-gap: 50px;
+    row-gap: 50px;
+    flex-wrap: wrap;
+}
+
+.pizza{
+    display: flex;
+    gap: 20px;
+    padding-top: 70px;
+}
+
+.pizza-card{
+    padding: 10px;
+    box-shadow: 1px 5px 20px 10px rgb(230, 230, 230);
+    border-radius: 20px;
+    height: 285px;
+}
+.selected{
+    box-shadow: 1px 5px 15px 10px rgba(255, 140, 0, 0.612);
+}
+.pizza-card:hover{
+    box-shadow: 1px 5px 15px 10px rgba(255, 140, 0, 0.612);
+}
+.pizza-card img{
+    width: 150px;
+}
+.pizza-card h3{
+    text-align: center;
+}
+.pizza-card p{
+    text-align: center;
+}
+.pizza-card-button{
+    box-shadow: 1px 5px 20px 10px rgb(#DCDCDC);
+    color: black;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 35px;
+    text-align: center;
+    cursor: pointer;
+    margin-left: 30px;
+}
+.pizza-param{
+    padding: 20px;
+}
+.pizza-param h2{
+    margin: auto 0;
+    margin-top: 10px;
+}
+.pizza-param-size{
+    display: flex;
+    justify-content: space-around;
+    padding: 4px;
+}
+.param-size{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+}
+.size{
+    background-color: #DCDCDC;
+    padding: 4px 50px;
+    border-radius: 15px;
+    box-shadow: 1px 5px 20px 10px rgb(230, 230, 230);
+}
+.size-selected{
+    background-color: white;
+}
+
+.topping{
+    background-color: white;
+    padding: 5px 8px;
+    padding: 10px;
+    box-shadow: 1px 5px 20px 10px rgb(230, 230, 230);
+    border-radius: 20px;
+    height: 250px;
+
+    width: 100px;
+    text-align: center;
+}
+.pizza-param-toppings{
+    display: flex;
+    gap: 15px;
+    margin-top: 16px;
+}
+
+.topping img{
+    width: 100px;
+}
+
+.pizza-button{
+    margin-left: auto;
+    margin-right: 13%;
+    width: 150px;
+    background-color: darkorange;
+    padding: 10px 60px;
+    border-radius: 35px;
+    text-align: center;
+    color: #fff;
+}
+
+.topping-added {
+    animation: highlight-add 0.3s ease-in-out;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 35px;
+    text-align: center;
+    background-color: #DCDCDC;
+    color: black;
+    cursor: pointer;
+}
+
+.topping-removed {
+    animation: highlight-remove 0.3s ease-in-out;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 35px;
+    text-align: center;
+    background-color: #DCDCDC;
+    color: black;
+    cursor: pointer;
+}
+

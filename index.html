@@ -1,77 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Pizza</title>
-<script src="scripts/script.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/style.css">
+    <title>Заказ пиццы</title>
 </head>
 <body>
-<form name="myForm">
-    <h1>Выбор пиццы</h1>
-    <select name="pizza">
-    <option value="Маргарита">Маргарита (500 рублей, 300ккал)</option>
-    <option value="Пепперони">Пепперони (800 рублей, 400ккал)</option>
-    <option value="Баварская">Баварская (700 рублей, 450ккал)</option>
-    </select>
-    <h1>Выбор размера</h1>
-    <select name="size">
-    <option value="Большая">Большая (+200 рублей, +200ккал)</option>
-    <option value="Маленькая">Маленькая (+100 рублей, +100ккал)</option>
-    </select>
-    <h1>Выбор топпинга</h1>
-    <select name="topping" multiple>
-    <option value="сливочная моцарелла ">
-        сливочная моцарелла (+50 рублей, +20ккал)
-    </option>
-    <option value="сырный борт">
-        сырный борт (+150 рублей, +50ккал для маленькой пиццы и +300 рублей
-        +50ккал для большой пиццы)
-    </option>
-    <option value="чедер и пармезан">
-        чедер и пармезан (+150 рублей +50ккал для маленькой пиццы и +300
-        рублей +50ккал для большой пиццы)
-    </option>
-    </select>
-    <p>Вы выбрали:</p>
-    <div id="selection"></div>
-    <button class="calculateBtn">Рассчитать</button>
-</form>
-<script>
-    const pizza = document.myForm.pizza;
-    const size = document.myForm.size;
-    const topping = document.myForm.topping;
-
-    const selection = document.getElementById("selection");
-
-    function changeOption() {
-    while (selection.firstChild) {
-        selection.removeChild(selection.firstChild);
-    }
-
-    const selectedPizza = pizza.value;
-    const selectedSize = size.value;
-    const selectedToppings = [];
-    for (let i = 0; i < topping.selectedOptions.length; i++) {
-        selectedToppings.push(topping.selectedOptions[i].value);
-    }
-
-    const pPizza = document.createElement("p");
-    pPizza.innerHTML = "Пицца: " + selectedPizza;
-    selection.appendChild(pPizza);
-
-    const pSize = document.createElement("p");
-    pSize.innerHTML = "Размер: " + selectedSize;
-    selection.appendChild(pSize);
-
-    const pToppings = document.createElement("p");
-    pToppings.innerHTML = "Топпинги: " + selectedToppings.join(", ");
-    selection.appendChild(pToppings);
-    }
-
-    pizza.addEventListener("change", changeOption);
-    size.addEventListener("change", changeOption);
-    topping.addEventListener("change", changeOption);
-</script>
+    <main>
+        <div class="block">
+            <div class="pizza">
+                <div class="pizza-card pizza-selected">
+                    <img src="img/img/pizzaPep.jpg" alt="Пепперони" class="imgPazza">
+                    <h3>Пепперони</h3>
+                    <p>800 рублей</p>
+                </div>
+                <div class="pizza-card">
+                    <img src="img/img/pizzaMarg.jpg" alt="Маргарита" class="imgPazza">
+                    <h3>Маргарита</h3>
+                    <p>500 рублей</p>
+                </div>
+                <div class="pizza-card">
+                    <img src="img/img/pizzaBavar.jpg" alt="Баварская" class="imgBavar">
+                    <h3>Баварская</h3>
+                    <p>700 рублей</p>
+                </div>
+            </div>
+    
+            <div class="pizza-param">
+                <h2>Выберите размер</h2>
+                <div class="param-size">
+                    <div class="size size-selected">Маленькая</div>
+                    <div class="size">Большая</div>
+                </div>
+    
+                <h2>Топпинг</h2>
+                <div class="pizza-param-toppings">
+                    <div class="topping">
+                        <img src="img/img/chbor.png" alt="Сырный бортик">
+                        <p>Сырный бортик</p>
+                        <h4>150P</h4>
+                        <button class="topping-added toppings-selected"> + </button>
+                        <button class="topping-removed toppings-selected"> - </button>
+                    </div>
+                    <div class="topping">
+                        <img src="img/img/slivmo.png" alt="Сливочная моцарелла">
+                        <p>Сливочная моцарелла</p>
+                        <h4>50P</h4>
+                        <button class="topping-added"> + </button>
+                        <button class="topping-removed toppings-selected"> - </button>
+                    </div>
+                    <div class="topping">
+                        <img src="img/img/chedparm.jpg" alt="Чеддер и пармезан">
+                        <p>Чеддер и пармезан</p>
+                        <h4>150P</h4>
+                        <button class="topping-added"> + </button>
+                        <button class="topping-removed toppings-selected"> - </button>
+                    </div>
+                </div>
+            </div>
+            <div class="pizza-button">
+                Добавить в корзину за <span class="cal">0 ₽ (0 кКал)</span>
+            </div>
+        </div>
+    </main>
+    <script src="scripts/script.js"></script>
 </body>
 </html>

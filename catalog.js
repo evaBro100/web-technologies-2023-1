@@ -16,16 +16,16 @@ const renderPostItem = (item) => `
 `;
 
 const getPostItems = async ({ limit, page }) => {
-	try {
-		const response = await fetch(
-			`https://jsonplaceholder.typicode.com/posts?_limit=${limit}&_page=${page}`
-		);
-		const total = +response.headers.get('x-total-count');
-		const items = await response.json();
-		return { items, total };
-	} catch (error) {
-		console.log('Error:', error);
-	}
+    try {
+        const response = await fetch(
+            `https://jsonplaceholder.typicode.com/posts?_limit=${limit}&_page=${page}`
+        );
+        const total = +response.headers.get('x-total-count');
+        const items = await response.json();
+        return { items, total };
+    } catch (error) {
+        console.log('Error:', error);
+    }
 };
 
 const renderPhotoItem = (item) => `
@@ -45,28 +45,28 @@ const renderPhotoItem = (item) => `
 `;
 
 const getPhotoItems = async ({ limit, page }) => {
-	try {
-		const response = await fetch(
-			`https://jsonplaceholder.typicode.com/photos?_limit=${limit}&_page=${page}`
-		);
-		const total = +response.headers.get('x-total-count');
-		const items = await response.json();
-		return { items, total };
-	} catch (error) {
-		console.log('Error:', error);
-	}
+    try {
+        const response = await fetch(
+            `https://jsonplaceholder.typicode.com/photos?_limit=${limit}&_page=${page}`
+        );
+        const total = +response.headers.get('x-total-count');
+        const items = await response.json();
+        return { items, total };
+    } catch (error) {
+        console.log('Error:', error);
+    }
 };
 
 const init = () => {
-	const catalog = document.getElementById('catalog');
-	new Catalog(catalog, {
-		renderItem: renderPostItem,
-		getItems: getPostItems,
-	}).init();
+    const catalog = document.getElementById('catalog');
+    new Catalog(catalog, {
+        renderItem: renderPostItem,
+        getItems: getPostItems,
+    }).init();
 };
 
 if (document.readyState === 'loading') {
-	document.addEventListener('DOMContentLoaded', init);
+    document.addEventListener('DOMContentLoaded', init);
 } else {
-	init();
+    init();
 }

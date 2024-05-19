@@ -25,7 +25,7 @@ class Pizza {
     return this.kind;
   }
 
-  calculatePrice() {
+  get price() {
     let price = 0;
     switch (this.kind) {
       case 'Маргарита':
@@ -54,7 +54,7 @@ class Pizza {
 
     this.toppings.forEach(topping => {
       switch (topping) {
-        case 'сливочная моцарелла ':
+        case 'сливочная моцарелла':
           price += 50;
           break;
         case 'сырный борт':
@@ -79,7 +79,7 @@ class Pizza {
     return price;
   }
 
-  calculateCalories() {
+  get calories() {
     let calories = 0;
     switch (this.kind) {
       case 'Маргарита':
@@ -108,7 +108,7 @@ class Pizza {
 
     this.toppings.forEach(topping => {
       switch (topping) {
-        case 'сливочная моцарелла ':
+        case 'сливочная моцарелла':
           calories += 20;
           break;
         case 'сырный борт':
@@ -144,8 +144,8 @@ document.addEventListener("DOMContentLoaded", function () {
         myPizza.addTopping(topping);
       });
 
-      const totalPrice = myPizza.calculatePrice();
-      const totalCalories = myPizza.calculateCalories();
+      const totalPrice = myPizza.price;
+      const totalCalories = myPizza.calories;
       alert(`Стоимость пиццы: ${totalPrice} рублей, Калорийность: ${totalCalories} ккал`);
     });
   }

@@ -1,42 +1,61 @@
+<!-- // 1 -->
+
 <?php
-date_default_timezone_set('Asia/Yekaterinburg');
-$pageTitle = "PHP";
-$headerTitle = "Текущее время:";
+$a = 5;  
+$b = -3; 
+echo "1 задание";
+if ($a >= 0 && $b >= 0) {
+    echo "Разность: " . ($a - $b);
+} elseif ($a < 0 && $b < 0) {
+    echo "Произведение: " . ($a * $b);
+} else {
+    echo "Сумма: " . ($a + $b);
+}
+?>
+<!-- // 2 -->
 
-function getCurrentTime() {
-    $hours = date("H");
-    $minutes = date("i");
+<?php
+$a = rand(0, 15);  // Присвоить переменной $a значение в промежутке [0..15]
+echo "Начальное значение \$a: $a<br>";
 
-    if ($hours == 1 || $hours == 21) {
-        $hoursSuffix = "час";
-    } elseif (($hours >= 2 && $hours <= 4) || ($hours >= 22 && $hours <= 24)) {
-        $hoursSuffix = "часа";
-    } else {
-        $hoursSuffix = "часов";
-    }
-
-    if ($minutes % 10 == 1 && $minutes != 11) {
-        $minutesSuffix = "минута";
-    } elseif (($minutes % 10 >= 2 && $minutes % 10 <= 4) && ($minutes < 10 || $minutes > 20)) {
-        $minutesSuffix = "минуты";
-    } else {
-        $minutesSuffix = "минут";
-    }
-
-    return "$hours $hoursSuffix $minutes $minutesSuffix";
+switch ($a) {
+    case 0:
+        echo "0, ";
+    case 1:
+        echo "1, ";
+    case 2:
+        echo "2, ";
+    case 3:
+        echo "3, ";
+    case 4:
+        echo "4, ";
+    case 5:
+        echo "5, ";
+    case 6:
+        echo "6, ";
+    case 7:
+        echo "7, ";
+    case 8:
+        echo "8, ";
+    case 9:
+        echo "9, ";
+    case 10:
+        echo "10, ";
+    case 11:
+        echo "11, ";
+    case 12:
+        echo "12, ";
+    case 13:
+        echo "13, ";
+    case 14:
+        echo "14, ";
+    case 15:
+        echo "15";
+        break;
+    default:
+        echo "Значение вне диапазона 0-15";
 }
 ?>
 
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?php echo $pageTitle ?></title>
-</head>
-<body>
-	<h1><?php echo $headerTitle ?></h1>
-	<h2><?php print_r(getCurrentTime()) ?></h2>
-</body>
-</html>
+
+
